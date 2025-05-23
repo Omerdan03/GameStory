@@ -1,0 +1,14 @@
+name: game_story
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pandas
+  - scikit-learn
+  - xgboost
+  - matplotlib
+  - seaborn
+  - jupyter
+  - pip
+  - pip:
+    - lightgbm
