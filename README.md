@@ -42,9 +42,22 @@ To run this project, you need to have Python and the required libraries installe
      ```bash
      pip install -r requirements.txt
      ```
-3. **Run the Notebooks**:
-   - Part A: Open and run `Part_A/Part_A.ipynb` to compute key metrics like Day-1 retention, 7-day cumulative ARPU, and 30-day churn rate.
-   - Part B: Open and run `Part_B/Part_B.ipynb` to see the work process for training a deposite forecasting model. Encluding feature engineering, model metric evaluation and feature importance.
+3. **Run the Notebooks and Prediction Script**:
+   - **Part A**: Open and run `Part_A/Part_A.ipynb` to compute key metrics such as Day-1 retention, 7-day cumulative ARPU, and 30-day churn rate.
+   - **Part B**: Open and run `Part_B/Part_B.ipynb` to follow the workflow for training a deposit forecasting model. This includes feature engineering, model evaluation, and feature importance analysis.  
+     This notebook produces a `model.pkl` file that can be used for prediction on new data.
+   - **Run Prediction Script**: Once the model is trained, you can generate predictions by running the script below:
+
+     ```bash
+     python Part_B/main.py \
+       --data_path ../data/ \
+       --model_path ./Part_B/model.pkl \
+       --output_path ./scores.csv
+     ```
+
+     - `--data_path`: Path to the folder containing `players.csv`, `sessions.csv`, and `transactions.csv`.
+     - `--model_path`: Path to the trained `model.pkl` file.
+     - `--output_path`: Where to save the predictions (default is `scores.csv`).
 
 ---
 
