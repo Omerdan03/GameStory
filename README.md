@@ -44,7 +44,7 @@ To run this project, you need to have Python and the required libraries installe
      ```
 3. **Run the Notebooks**:
    - Part A: Open and run `Part_A/Part_A.ipynb` to compute key metrics like Day-1 retention, 7-day cumulative ARPU, and 30-day churn rate.
-   - Part B: Open and run `Part_B/Part_B.ipynb` to build the deposit forecasting model, generate predictions, and analyze feature importance.
+   - Part B: Open and run `Part_B/Part_B.ipynb` Didn't finished, **only had a baseline model**
 
 ---
 
@@ -65,11 +65,4 @@ The results are detailed in the `Part_A.ipynb` notebook and the `Insight_memo.pd
 
 ## Part B: Predictive Model
 
-The goal of this part is to build a model to forecast the expected deposit amount for the next 30 days per player. The process includes:
-- **Data Loading & Feature Engineering**: Preprocessing the player and transaction data to create meaningful features.
-- **Model Comparison**: Testing at least two predictive models (e.g., Random Forest, XGBoost) to forecast deposit amounts.
-- **Feature Importance**: Visualizing which features contribute most to the model’s predictions.
-
-The final output includes:
-- A `scores.csv` file containing player IDs and their predicted deposit amounts for the next 30 days.
-- A **model card** explaining the model's performance, metrics, and next steps.
+The goal of this part is to build a model to forecast the expected deposit amount for the next 30 days per player.
