@@ -6,3 +6,5 @@ scikit-learn==1.1.3
 xgboost==1.7.4
 shap==0.41.0
 statsmodels==0.13.5
+ipykernel
+nbformat>=4.2.0
