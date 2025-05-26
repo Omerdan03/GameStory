@@ -66,3 +66,41 @@ The results are detailed in the `Part_A.ipynb` notebook and the `Insight_memo.pd
 ## Part B: Predictive Model
 
 The goal of this part is to build a model to forecast the expected deposit amount for the next 30 days per player.
+
+### Regression Model – XGBoost for Deposit Forecasting
+
+**Key Features Used:**  
+- `avg_session_length`, `active_days`, `total_deposit`, `deposit_count`, `avg_deposit`
+
+**Performance Metrics:**  
+- **R² score:** -0.147  
+- **RMSE:** $41  
+- **Error Pattern:** Low prediction variance, similar to baseline model
+
+**SHAP Insights:**  
+- High `avg_deposit` and `active_days` → increase predicted value  
+- High `total_deposit` and `num_sessions` → decrease prediction (saturation/churn risk)
+
+---
+
+### Clustering Model – KMeans Behavioral Segmentation
+
+**Key Features Used:**  
+- Scaled features: `avg_session_length`, `active_days`, `total_deposit`, `deposit_count`, etc.
+
+**Performance Metrics:**  
+- **R² score:** 0.002  
+- **RMSE:** $39  
+- **Error Pattern:** Low prediction variance, behaved like baseline model
+
+**Insights:**  
+- Average deposit per cluster showed little variance  
+- Indicates clustering does not meaningfully separate high/low depositors
+
+---
+
+### Time Series Model (ARIMA) – Not Applicable
+
+**Reason:**  
+Although ARIMA models are suited for sequential forecasting, they are not applicable here due to insufficient data per player. Most users lack a long enough deposit history to fit and validate time series models such as ARIMA or ARIMAX.
+
